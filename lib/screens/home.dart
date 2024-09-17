@@ -91,9 +91,10 @@ class HomeScreen extends StatelessWidget {
               smallText: 'View all',
               func: () => Navigator.pushReplacementNamed(context, 'AllHotels')),
           SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
               child: Row(
-            children: hotelList.map((ht) => const Hotel()).toList(),
-          ))
+                children: hotelList.map((ht) => const Hotel()).toList(),
+              ))
         ],
       ),
     );

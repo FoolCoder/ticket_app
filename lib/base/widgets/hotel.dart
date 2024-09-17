@@ -7,10 +7,10 @@ class Hotel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final size = MediaQueryData.fromView().size;
+    final size = MediaQuery.of(context).size;
     return Container(
-      margin: const EdgeInsets.only(left: 20, right: 60),
-      width: 300,
+      margin: const EdgeInsets.all(20),
+      width: size.width * 0.6,
       height: 300,
       decoration: BoxDecoration(
           color: AppStyles.primaryColor,
