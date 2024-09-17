@@ -5,6 +5,7 @@ import 'package:ticket_app/base/widgets/app_layoutbuilder.dart';
 import 'package:ticket_app/base/widgets/big_circle.dart';
 import 'package:ticket_app/base/widgets/big_dot.dart';
 import 'package:ticket_app/base/widgets/customtext.dart';
+import 'package:ticket_app/base/widgets/hotel.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
@@ -140,7 +141,7 @@ class TicketView extends StatelessWidget {
                         txt1: ticket['number'].toString(),
                         txt2: 'Number',
                         alignment: CrossAxisAlignment.end,
-                      )
+                      ),
                     ],
                   ),
                 ],
