@@ -1,38 +1,50 @@
+// ignore_for_file: dead_code
+
 import 'package:flutter/material.dart';
+import 'package:ticket_app/base/widgets/app_txt_icon.dart';
 
 class AppTicketTab extends StatelessWidget {
   const AppTicketTab({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50), color: Color(0xFFF4F6FD)),
-      child: Row(
+          borderRadius: BorderRadius.circular(50),
+          color: const Color(0xFFF4F6FD)),
+      child: const Row(
         children: [
-          Container(
-            padding: const EdgeInsets.all(10),
-            width: size.width * 0.44,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50), color: Colors.white),
-            child: const Text(
-              'Airline ticket',
-              textAlign: TextAlign.center,
-            ),
+          AppTabs(
+            tabText: 'Airline ticket',
+            selectedTab: false,
           ),
-          Container(
-            padding: const EdgeInsets.all(10),
-            width: size.width * 0.44,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
-                color: Colors.transparent),
-            child: const Text(
-              'Hotels',
-              textAlign: TextAlign.center,
-            ),
-          )
+          AppTabs(
+            tabText: 'Hotels',
+            selectedTab: true,
+          ),
         ],
+      ),
+    );
+  }
+}
+
+class AppTabs extends StatelessWidget {
+  const AppTabs({super.key, this.tabText = '', this.selectedTab = false});
+  final String tabText;
+  final bool selectedTab;
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
+    return Container(
+      padding: const EdgeInsets.all(10),
+      width: size.width * 0.44,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(selectedTab == false ? 50 : 0),
+          color: selectedTab == false ? Colors.white : Colors.transparent),
+      child: Text(
+        tabText,
+        textAlign: TextAlign.center,
       ),
     );
   }

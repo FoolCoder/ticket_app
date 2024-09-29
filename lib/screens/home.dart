@@ -4,6 +4,7 @@ import 'package:ticket_app/base/res/media.dart';
 import 'package:ticket_app/base/res/styles/app_styles.dart';
 import 'package:ticket_app/base/utils/app_json.dart';
 import 'package:ticket_app/base/widgets/app_double_txt.dart';
+import 'package:ticket_app/base/widgets/app_txt_icon.dart';
 import 'package:ticket_app/base/widgets/hotel.dart';
 import 'package:ticket_app/base/widgets/ticket_view.dart';
 
@@ -52,22 +53,10 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 10, vertical: 12),
-                    decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        color: Colors.white),
-                    child: const Row(
-                      children: [
-                        Icon(
-                          FluentSystemIcons.ic_fluent_search_filled,
-                          color: Color(0xFFBFC205),
-                        ),
-                        Text('  Search')
-                      ],
-                    ),
-                  )
+                  const AppTxtIcon(
+                      iconTxt: '  Search',
+                      iconName: Icons.search,
+                      iconColor: Color(0xFFBFC205))
                 ],
               ),
             ),
