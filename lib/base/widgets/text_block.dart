@@ -12,7 +12,7 @@ class TextBlock extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Center(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
         width: MediaQuery.of(context).size.width * 0.45,
         height: boxHeight,
         decoration: BoxDecoration(

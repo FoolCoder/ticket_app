@@ -2,6 +2,7 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/screens/home.dart';
 import 'package:ticket_app/screens/search.dart';
+import 'package:ticket_app/screens/ticket_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -18,10 +19,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     SearchScreen(),
-    Text(
-      'Index 2: Tickets',
-      style: optionStyle,
-    ),
+    TicketScreen(),
     Text(
       'Index 2: Profile',
       style: optionStyle,
