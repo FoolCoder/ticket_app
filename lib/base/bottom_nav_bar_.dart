@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_app/screens/home.dart';
+import 'package:ticket_app/screens/profile.dart';
 import 'package:ticket_app/screens/search.dart';
 import 'package:ticket_app/screens/ticket_screen.dart';
 
@@ -20,10 +21,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     HomeScreen(),
     SearchScreen(),
     TicketScreen(),
-    Text(
-      'Index 2: Profile',
-      style: optionStyle,
-    ),
+    Profile(),
   ];
   void _onItemTapped(int index) {
     setState(() {
